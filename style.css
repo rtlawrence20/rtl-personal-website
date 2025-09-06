@@ -4,17 +4,21 @@ body {
     margin: 0; 
     padding: 0; 
     text-align: center;
+    background-image: linear-gradient(to right,#0b1118, #1a1a1a); /* Horizontal gradient background */
+    color: #ffffff; /* Make default text color white for better contrast */
 }
 
 /* === Navbar Styles  === */
 .navbar {
     top: 0; 
-    width: 100%; 
+    width: 98%; 
     z-index: 1000; /* Ensure it's above other content */
     position: fixed; 
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 0.5em; /* Space inside  */
-
+    background-color: #0b1118;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 12px; /* Rounded corners */
 }
 .navbar ul {
     list-style: none; /* Remove default bullet points */   
@@ -22,6 +26,11 @@ body {
 .navbar ul li {
     display: inline; /* Nav horizontal row */
     margin: 0 4em; 
+}
+
+.navbar ul li a {
+    color: #F2C185; /* Softer tone with less brightness */
+    font-weight: bold;
 }
 
 /* === Main Content === */
@@ -33,6 +42,9 @@ body {
 .main-content section {
     padding: 2em 1em; /* Vertical and horizontal padding inside each section */
     text-align: center;
+}
+.main-content #home a {
+    color: #F2C185; /* Softer tone with less brightness */
 }
 
 /* === Floated Image === */
@@ -63,6 +75,16 @@ body {
     justify-self: center;
 }
 
+/* === Skills === */
+.skills-container li {
+    list-style-position: inside; /* Move bullets inside */
+}
+.skills-container li ul {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7); /* White text with 70% opacity */
+    font-size: 0.8em;
+}
+
 /* === Languages === */
 .languages-section ul {
   list-style-position: inside; /* Move bullets inside */
@@ -75,10 +97,17 @@ body {
 .projects-item {
     margin: 1em; 
     padding: 1em;
+    background-color: #2e2e2e;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
     box-sizing: border-box;
     border-radius: 8px; /* Rounded corners */
     transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.projects-item p ul {
+    list-style-position: inside; /* Move bullets inside */
+    padding-left: 1em;
+    margin: 0 0 1em 0; /* optional spacing around list */
 }
 
 /* === Hover Effect on Project Cards === */
@@ -108,4 +137,43 @@ footer {
     position: relative; 
     bottom: 0; 
     width: 100%; 
+}
+
+
+/* === Responsive Design changes for different sized screens === */
+/* === Responsive Styles for Mobile Screens (≤ 768px) === */
+@media (max-width: 768px) {
+  #projects {
+    grid-template-columns: 1fr; /* Stack projects in a single column */
+    padding: 1em; /* Maintain padding */
+    width: 60%; /* Stretch container full width */
+  }
+}
+
+/* === Responsive Navbar Styles for Medium Screens (≤ 1080px) === */
+@media (max-width: 1080px) {
+    .navbar {
+        text-align: left; /* Align nav items to left for better mobileviewing*/
+        padding: 1em;
+        font-size: 1em;
+        height: auto; /* Allow height to grow with content */
+        min-height: 100vh; /* Take up full viewport height */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto; /* Let width size based on content */
+        max-width: 300px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0; 
+    }
+
+    .navbar ul li {
+        display: block; /* Make each nav item take full width */
+        margin: 0.5em 0;
+    }
 }
