@@ -1,0 +1,50 @@
+/* === Base Body Styles === */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Set font stack with fallbacks */
+    margin: 0; 
+    padding: 0; 
+}
+
+/* === Navbar Styles  === */
+.navbar {
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; /* Ensure it's above other content */
+    position: fixed; 
+    text-align: center; 
+    font-size: 1.4em;
+    padding: 0.5em; /* Space inside  */
+
+}
+
+.navbar ul {
+    list-style: none; /* Remove default bullet points */   
+}
+
+.navbar ul li {
+    display: inline; /* Nav horizontal row */
+    margin: 0 4em; /* Spacing between */
+}
+
+/* === Main Content === */
+.main-content {
+    padding-top: 6em; /* Create space below the fixed navbar */
+}
+
+/* want to keep these two consistent for now but may split later*/
+.main-content header, 
+.main-content section {
+    padding: 2em 1em; /* Vertical and horizontal padding inside each section */
+    text-align: center;
+}
+
+/* === Footer === */
+footer {
+    background-color: #222; 
+    color: #fff; 
+    padding: 1em; 
+    text-align: center; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
