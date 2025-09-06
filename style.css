@@ -71,16 +71,19 @@ body {
     grid-template-columns: 1fr 1fr; /* 2 equal-width columns */
     gap: 1em;
     padding: 1em;
-    width: 75%;
+    width: 80%;
     justify-self: center;
 }
 
 /* === Skills === */
+.skills-container {
+    grid-template-columns: repeat(3, 1fr);
+}
 .skills-container li {
     list-style-position: inside; /* Move bullets inside */
+    text-align: left;
 }
 .skills-container li ul {
-    text-align: left;
     color: rgba(255, 255, 255, 0.7); /* White text with 70% opacity */
     font-size: 0.8em;
 }
@@ -143,11 +146,14 @@ footer {
 /* === Responsive Design changes for different sized screens === */
 /* === Responsive Styles for Mobile Screens (≤ 768px) === */
 @media (max-width: 768px) {
-  #projects {
-    grid-template-columns: 1fr; /* Stack projects in a single column */
-    padding: 1em; /* Maintain padding */
-    width: 60%; /* Stretch container full width */
-  }
+    #projects {
+        grid-template-columns: 1fr; /* Stack projects in a single column */
+        padding: 1em; 
+    }
+    .skills-container {
+    display: block;
+    padding: 1em; 
+    }
 }
 
 /* === Responsive Navbar Styles for Medium Screens (≤ 1080px) === */
@@ -162,7 +168,7 @@ footer {
         top: 0;
         left: 0;
         width: auto; /* Let width size based on content */
-        max-width: 300px;
+        max-width: 200px;
     }
 
     .navbar ul {
@@ -175,5 +181,10 @@ footer {
     .navbar ul li {
         display: block; /* Make each nav item take full width */
         margin: 0.5em 0;
+    }
+
+    .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 3em;
     }
 }
