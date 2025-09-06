@@ -38,6 +38,24 @@ body {
     text-align: center;
 }
 
+/* === Floated Images === */
+.float-left {
+    float: left; /* Float element to the left */
+    width: 75px; /* Fixed width */
+    height: 75px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers box without distortion */
+    margin-right: 1rem; /* Space to the right of the image */
+    margin-bottom: 0.5rem; /* Space below image */
+    border-radius: 20px; /* Round image corners */
+}
+
+/* === About Me Section Text Styles === */
+.about-me-text {
+    width: 60%; /* Constrain text width */
+    text-align: left; /* Align text to the left */
+    justify-self: center; /* Center inside grid if parent is grid */
+}
+
 /* === Footer === */
 footer {
     background-color: #222; 
