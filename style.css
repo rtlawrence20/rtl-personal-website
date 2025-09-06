@@ -3,6 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* Set font stack with fallbacks */
     margin: 0; 
     padding: 0; 
+    text-align: center;
 }
 
 /* === Navbar Styles  === */
@@ -11,26 +12,22 @@ body {
     width: 100%; 
     z-index: 1000; /* Ensure it's above other content */
     position: fixed; 
-    text-align: center; 
     font-size: 1.4em;
     padding: 0.5em; /* Space inside  */
 
 }
-
 .navbar ul {
     list-style: none; /* Remove default bullet points */   
 }
-
 .navbar ul li {
     display: inline; /* Nav horizontal row */
-    margin: 0 4em; /* Spacing between */
+    margin: 0 4em; 
 }
 
 /* === Main Content === */
 .main-content {
     padding-top: 6em; /* Create space below the fixed navbar */
 }
-
 /* want to keep these two consistent for now but may split later*/
 .main-content header, 
 .main-content section {
@@ -38,23 +35,69 @@ body {
     text-align: center;
 }
 
-/* === Floated Images === */
+/* === Floated Image === */
 .float-left {
     float: left; /* Float element to the left */
-    width: 75px; /* Fixed width */
-    height: 75px; /* Fixed height */
+    width: 75px; 
+    height: 75px; 
     object-fit: cover; /* Ensure image covers box without distortion */
-    margin-right: 1rem; /* Space to the right of the image */
-    margin-bottom: 0.5rem; /* Space below image */
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 20px; /* Round image corners */
 }
 
-/* === About Me Section Text Styles === */
+/* === About Me Section === */
 .about-me-text {
-    width: 60%; /* Constrain text width */
-    text-align: left; /* Align text to the left */
-    justify-self: center; /* Center inside grid if parent is grid */
+    width: 60%; 
+    text-align: left;
+    justify-self: center;
 }
+
+/* === Grid items === */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal-width columns */
+    gap: 1em;
+    padding: 1em;
+    width: 75%;
+    justify-self: center;
+}
+
+/* === Languages === */
+.languages-section ul {
+  list-style-position: inside; /* Move bullets inside */
+}
+
+/* === Projects Grid Container === */
+
+
+/* === Project Card Styles === */
+.projects-item {
+    margin: 1em; 
+    padding: 1em;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+/* === Hover Effect on Project Cards === */
+.projects-item:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
+}
+
+/* === Project Images === */
+.projects-item img {
+    border-radius: 12px; 
+    width: 100%; 
+}
+
+/* === Project Titles === */
+.projects-item h3 {
+    font-weight: bold; 
+    margin-bottom: 0.5em; 
+}
+
 
 /* === Footer === */
 footer {

@@ -13,7 +13,7 @@
     <body>
 
         <!-- Navigation Bar -->
-        <nav class="navbar">
+        <nav class="navbar center-text">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About Me</a></li>
@@ -26,7 +26,12 @@
         <main class="main-content">
 
             <!-- Home Content -->
-            <header id="home"></header>
+            <header id="home">
+                <h1>Robert Lawrence<br> 
+                    Portfolio</h1>
+                <p>My journery into understanding HTML and CSS</p>
+                <a href="https://github.com/rtlawrence20">GitHub</a>
+            </header>
 
             <!-- About Me Content -->
             <section id ="about-me">
@@ -56,12 +61,37 @@
 
             <!-- Languages -->
             <section class="languages-section">
-                <p>
-                </p>
+                <h2>Languages I've learned</h2>
+                <ul class="grid-container">
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C#</li>
+                </ul>
             </section>
 
             <!-- Projects Content -->
-            <section id="projects">
+            <h2 class="center">Projects I've done</h2>
+            <section id="projects" class="grid-container">
+                <article class="projects-item">
+                    <h3>JavaScript Calculator</h3>
+                        <p>
+                            <ul>
+                                <li>Add/Subtract</li>
+                                <li>Divide/Multiply</li>
+                                <li>Maintain history of calculations</li>
+                            </ul>
+                        </p>
+                    <img src="calcImg.PNG" alt="Calculator Project">
+                </article>
+                
+                <article class="projects-item">
+                    <h3>Project TBD</h3>
+                    <p>Description of Project</p>
+                </article>
             </section>
 
             <!-- Contact Content -->
