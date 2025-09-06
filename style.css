@@ -156,14 +156,18 @@ footer {
     }
 
     .main-content {
-        padding-left: 20%;
+        padding-left: 100px;
     }
     .languages-section h2, .languages-section h4{
-        padding-left: 10%;
+        padding-left: 50px;
     }
     #home {
         flex-wrap: wrap;
-        padding-left: 20%;
+        padding-left: 100px;
+    }
+    #projects h3 {
+        flex-wrap: wrap;
+        padding-left: 100px;
     }
 }
 
